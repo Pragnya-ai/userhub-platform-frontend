@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.swo
+
+# Coverage
+coverage/
+*.cover
+
+# Database
+*.sqlite3
+*.db
+
+# Test output
+test-results/
+
+# Backup files
+*.bak
+*.tmp
+
+# Others
+*.orig

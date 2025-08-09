@@ -1,15 +1,18 @@
-
 import { useUserStore } from "../store/useUserStore";
 import { useState } from "react";
 
 export default function Profile() {
   const { user, setUser } = useUserStore();
   const [form, setForm] = useState({
-    name: "",
-    email: "",
+    id: "",
     role: "creator",
+    name: "",
     title: "",
-    location: "",
+    email: "",
+    bio: "",
+    city: "",
+    state: "",
+    country: "",
     discipline: "",
     medium: "",
     subgenre: "",
@@ -48,10 +51,18 @@ export default function Profile() {
     <div className="max-w-2xl mx-auto mt-10 p-6 bg-white rounded shadow">
       <h2 className="text-2xl font-bold mb-6">Profile Info</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
+        <input name="id" placeholder="ID" className="w-full border p-2" onChange={handleChange} />
+        <select name="role" className="w-full border p-2" onChange={handleChange}>
+          <option value="creator">Creator</option>
+          <option value="brand_manager">Brand Manager</option>
+        </select>
         <input name="name" placeholder="Name" className="w-full border p-2" onChange={handleChange} />
-        <input name="email" placeholder="Email" className="w-full border p-2" onChange={handleChange} />
         <input name="title" placeholder="Title" className="w-full border p-2" onChange={handleChange} />
-        <input name="location" placeholder="Location" className="w-full border p-2" onChange={handleChange} />
+        <input name="email" placeholder="Email" className="w-full border p-2" onChange={handleChange} />
+        <textarea name="bio" placeholder="Bio" className="w-full border p-2" onChange={handleChange}></textarea>
+        <input name="city" placeholder="City" className="w-full border p-2" onChange={handleChange} />
+        <input name="state" placeholder="State" className="w-full border p-2" onChange={handleChange} />
+        <input name="country" placeholder="Country" className="w-full border p-2" onChange={handleChange} />
         <input name="discipline" placeholder="Discipline" className="w-full border p-2" onChange={handleChange} />
         <input name="medium" placeholder="Medium" className="w-full border p-2" onChange={handleChange} />
         <input name="subgenre" placeholder="Subgenre" className="w-full border p-2" onChange={handleChange} />
